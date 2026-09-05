@@ -1,0 +1,1138 @@
+{
+  "BallKick": {
+    "action_rate_l2": {
+      "curriculum": true,
+      "func": "action_rate_l2",
+      "weight": -0.1
+    },
+    "angular_momentum": {
+      "curriculum": false,
+      "func": "angular_momentum_penalty",
+      "weight": -0.02
+    },
+    "ball_forward_velocity": {
+      "curriculum": false,
+      "func": "ball_forward_velocity",
+      "weight": 12.0
+    },
+    "ball_speed_overshoot": {
+      "curriculum": false,
+      "func": "ball_speed_overshoot_penalty",
+      "weight": -4.0
+    },
+    "body_ang_vel": {
+      "curriculum": false,
+      "func": "body_angular_velocity_penalty",
+      "weight": -0.05
+    },
+    "dof_pos_limits": {
+      "curriculum": false,
+      "func": "joint_pos_limits",
+      "weight": -1.0
+    },
+    "height_stand": {
+      "curriculum": false,
+      "func": "height_target_gaussian",
+      "weight": 1.0
+    },
+    "pose_stand_legs": {
+      "curriculum": false,
+      "func": "pose_target_match",
+      "weight": 2.0
+    },
+    "pose_stand_neck": {
+      "curriculum": false,
+      "func": "pose_target_match",
+      "weight": 1.0
+    },
+    "self_collisions": {
+      "curriculum": false,
+      "func": "self_collision_cost",
+      "weight": -1.0
+    },
+    "support_foot_grounded": {
+      "curriculum": false,
+      "func": "single_foot_grounded_reward",
+      "weight": 2.0
+    },
+    "upright": {
+      "curriculum": false,
+      "func": "upright",
+      "weight": 2.0
+    }
+  },
+  "GroundPick": {
+    "action_rate_l2": {
+      "curriculum": true,
+      "func": "action_rate_l2",
+      "weight": -2.0
+    },
+    "angular_momentum": {
+      "curriculum": false,
+      "func": "angular_momentum_penalty",
+      "weight": -0.02
+    },
+    "body_ang_vel": {
+      "curriculum": false,
+      "func": "body_angular_velocity_penalty",
+      "weight": -0.05
+    },
+    "dof_pos_limits": {
+      "curriculum": false,
+      "func": "joint_pos_limits",
+      "weight": -1.0
+    },
+    "feet_flat": {
+      "curriculum": false,
+      "func": "feet_flat_penalty",
+      "weight": -2.0
+    },
+    "feet_grounded": {
+      "curriculum": false,
+      "func": "feet_grounded_reward",
+      "weight": 3.0
+    },
+    "ground_pick_return_pose_legs": {
+      "curriculum": false,
+      "func": "ground_pick_return_pose_phased",
+      "weight": 6.0
+    },
+    "ground_pick_return_pose_neck": {
+      "curriculum": false,
+      "func": "ground_pick_return_pose_phased",
+      "weight": 6.0
+    },
+    "head_impact_penalty": {
+      "curriculum": false,
+      "func": "body_impact_cost",
+      "weight": -2.0
+    },
+    "joint_torques_l2": {
+      "curriculum": false,
+      "func": "joint_torques_l2",
+      "weight": -0.005
+    },
+    "mouth_ground_proximity": {
+      "curriculum": false,
+      "func": "mouth_ground_proximity_phased",
+      "weight": 3.0
+    },
+    "mouth_payload_force": {
+      "curriculum": false,
+      "func": "apply_mouth_payload_force",
+      "weight": 0.0
+    },
+    "mouth_perpendicular_to_ground": {
+      "curriculum": false,
+      "func": "mouth_perpendicular_phased",
+      "weight": 2.0
+    },
+    "neck_action_rate_l2": {
+      "curriculum": false,
+      "func": "neck_action_rate_l2",
+      "weight": -1.0
+    },
+    "neck_vel_descent": {
+      "curriculum": false,
+      "func": "neck_vel_descent_penalty",
+      "weight": -0.1
+    },
+    "return_upright": {
+      "curriculum": false,
+      "func": "ground_pick_return_upright_phased",
+      "weight": 4.0
+    },
+    "self_collisions": {
+      "curriculum": false,
+      "func": "self_collision_cost",
+      "weight": -1.0
+    },
+    "soft_landing": {
+      "curriculum": false,
+      "func": "soft_landing",
+      "weight": -1e-05
+    },
+    "upright": {
+      "curriculum": false,
+      "func": "upright",
+      "weight": 0.2
+    }
+  },
+  "RollerCrouch": {
+    "action_rate_l2": {
+      "curriculum": true,
+      "func": "action_rate_l2",
+      "weight": -1.0
+    },
+    "angular_momentum": {
+      "curriculum": false,
+      "func": "angular_momentum_penalty",
+      "weight": -0.02
+    },
+    "body_ang_vel": {
+      "curriculum": false,
+      "func": "body_angular_velocity_penalty",
+      "weight": -0.05
+    },
+    "crouch_forward_lean": {
+      "curriculum": false,
+      "func": "crouch_forward_lean",
+      "weight": 1.0
+    },
+    "crouch_glide_pose": {
+      "curriculum": false,
+      "func": "crouch_glide_pose_by_phase",
+      "weight": 6.0
+    },
+    "crouch_glide_pose_l1": {
+      "curriculum": false,
+      "func": "crouch_glide_pose_l1",
+      "weight": 2.0
+    },
+    "feet_flat": {
+      "curriculum": false,
+      "func": "feet_flat_penalty",
+      "weight": -2.0
+    },
+    "forward_speed": {
+      "curriculum": false,
+      "func": "forward_speed_reward",
+      "weight": 1.0
+    },
+    "joint_torques_l2": {
+      "curriculum": false,
+      "func": "joint_torques_l2",
+      "weight": -0.001
+    },
+    "neck_action_rate_l2": {
+      "curriculum": false,
+      "func": "neck_action_rate_l2",
+      "weight": -0.5
+    },
+    "self_collisions": {
+      "curriculum": false,
+      "func": "self_collision_cost",
+      "weight": -1.0
+    },
+    "upright": {
+      "curriculum": false,
+      "func": "upright",
+      "weight": 2.0
+    }
+  },
+  "RollerSlope": {
+    "action_rate_l2": {
+      "curriculum": false,
+      "func": "action_rate_l2",
+      "weight": -1.0
+    },
+    "alive": {
+      "curriculum": false,
+      "func": "is_alive",
+      "weight": 1.0
+    },
+    "feet_flat": {
+      "curriculum": false,
+      "func": "feet_flat_penalty",
+      "weight": -2.0
+    },
+    "heading_hold": {
+      "curriculum": false,
+      "func": "heading_hold_reward",
+      "weight": 1.5
+    },
+    "joint_torques_l2": {
+      "curriculum": false,
+      "func": "joint_torques_l2",
+      "weight": -0.001
+    },
+    "neck_action_rate_l2": {
+      "curriculum": false,
+      "func": "neck_action_rate_l2",
+      "weight": -0.5
+    },
+    "neck_joint_pos_l2": {
+      "curriculum": false,
+      "func": "neck_joint_pos_l2",
+      "weight": -0.75
+    },
+    "upright": {
+      "curriculum": false,
+      "func": "body_upright_gaussian",
+      "weight": 3.0
+    },
+    "wheel_glide": {
+      "curriculum": false,
+      "func": "wheel_glide_reward",
+      "weight": 2.0
+    }
+  },
+  "RollerStandUp": {
+    "action_over_limit": {
+      "curriculum": false,
+      "func": "action_over_limit_penalty",
+      "weight": -0.5
+    },
+    "action_rate_l2": {
+      "curriculum": true,
+      "func": "action_rate_l2",
+      "weight": -0.6
+    },
+    "angular_momentum": {
+      "curriculum": false,
+      "func": "angular_momentum_penalty",
+      "weight": -0.02
+    },
+    "body_ang_vel": {
+      "curriculum": false,
+      "func": "body_angular_velocity_penalty",
+      "weight": -0.05
+    },
+    "com_upward_velocity": {
+      "curriculum": false,
+      "func": "com_upward_velocity",
+      "weight": 3.0
+    },
+    "gentle_rise": {
+      "curriculum": false,
+      "func": "trunk_vertical_accel_penalty",
+      "weight": 0.02
+    },
+    "height_stand": {
+      "curriculum": false,
+      "func": "height_target_gaussian",
+      "weight": 4.0
+    },
+    "height_stand_l1": {
+      "curriculum": false,
+      "func": "height_l1_penalty",
+      "weight": 30.0
+    },
+    "height_stand_sharp": {
+      "curriculum": false,
+      "func": "height_target_gaussian",
+      "weight": 4.0
+    },
+    "joint_torque_rate_l2": {
+      "curriculum": false,
+      "func": "joint_torque_rate_l2",
+      "weight": -0.2
+    },
+    "joint_torques_l2": {
+      "curriculum": false,
+      "func": "joint_torques_l2",
+      "weight": -0.001
+    },
+    "neck_action_rate_l2": {
+      "curriculum": false,
+      "func": "neck_action_rate_l2",
+      "weight": -0.5
+    },
+    "neck_joint_pos_l2": {
+      "curriculum": false,
+      "func": "neck_joint_pos_l2",
+      "weight": -0.5
+    },
+    "pose_stand_l1": {
+      "curriculum": false,
+      "func": "pose_l1_penalty",
+      "weight": 5.0
+    },
+    "pose_stand_legs": {
+      "curriculum": false,
+      "func": "pose_target_match",
+      "weight": 8.0
+    },
+    "self_collisions": {
+      "curriculum": false,
+      "func": "self_collision_cost",
+      "weight": -1.0
+    },
+    "standing_composite": {
+      "curriculum": false,
+      "func": "standing_composite_score",
+      "weight": 15.0
+    },
+    "upright_linear": {
+      "curriculum": false,
+      "func": "body_upright_linear",
+      "weight": 6.0
+    },
+    "upright_sharp": {
+      "curriculum": false,
+      "func": "upright_gaussian_at_height",
+      "weight": 6.0
+    }
+  },
+  "Rollers": {
+    "action_over_limit": {
+      "curriculum": false,
+      "func": "action_over_limit_penalty",
+      "weight": -0.5
+    },
+    "action_rate_l2": {
+      "curriculum": true,
+      "func": "action_rate_l2",
+      "weight": -1.0
+    },
+    "angular_momentum": {
+      "curriculum": false,
+      "func": "angular_momentum_penalty",
+      "weight": -0.02
+    },
+    "body_ang_vel": {
+      "curriculum": false,
+      "func": "body_angular_velocity_penalty",
+      "weight": -0.05
+    },
+    "braking": {
+      "curriculum": false,
+      "func": "braking_reward",
+      "weight": 1.0
+    },
+    "com_height_target": {
+      "curriculum": false,
+      "func": "com_height_target",
+      "weight": 2.0
+    },
+    "feet_flat": {
+      "curriculum": false,
+      "func": "feet_flat_penalty",
+      "weight": -2.0
+    },
+    "forward_lean": {
+      "curriculum": false,
+      "func": "forward_lean_reward",
+      "weight": 1.5
+    },
+    "gait_symmetry": {
+      "curriculum": false,
+      "func": "gait_symmetry_penalty",
+      "weight": -1.0
+    },
+    "glide": {
+      "curriculum": false,
+      "func": "glide_reward",
+      "weight": 4.0
+    },
+    "heading_hold": {
+      "curriculum": false,
+      "func": "heading_hold_reward",
+      "weight": 1.0
+    },
+    "hip_roll_neutral": {
+      "curriculum": false,
+      "func": "joint_deviation_l1",
+      "weight": -2.0
+    },
+    "joint_torques_l2": {
+      "curriculum": false,
+      "func": "joint_torques_l2",
+      "weight": -0.001
+    },
+    "neck_action_rate_l2": {
+      "curriculum": false,
+      "func": "neck_action_rate_l2",
+      "weight": -0.5
+    },
+    "neck_joint_pos_l2": {
+      "curriculum": false,
+      "func": "neck_joint_pos_l2",
+      "weight": -0.5
+    },
+    "pose": {
+      "curriculum": false,
+      "func": "variable_posture",
+      "weight": 2.0
+    },
+    "self_collisions": {
+      "curriculum": false,
+      "func": "self_collision_cost",
+      "weight": -1.0
+    },
+    "single_support": {
+      "curriculum": false,
+      "func": "single_support_reward",
+      "weight": 3.0
+    },
+    "skating_air_time": {
+      "curriculum": false,
+      "func": "skating_air_time_reward",
+      "weight": 1.5
+    },
+    "upright": {
+      "curriculum": false,
+      "func": "upright",
+      "weight": 2.0
+    },
+    "wheel_speed": {
+      "curriculum": false,
+      "func": "wheel_speed_reward",
+      "weight": 10.0
+    }
+  },
+  "Roulade": {
+    "action_rate_l2": {
+      "curriculum": true,
+      "func": "action_rate_l2",
+      "weight": -0.1
+    },
+    "angular_momentum": {
+      "curriculum": false,
+      "func": "angular_momentum_penalty",
+      "weight": -0.001
+    },
+    "arrival_damping": {
+      "curriculum": true,
+      "func": "body_ang_vel_at_height",
+      "weight": 0.0
+    },
+    "body_ang_vel": {
+      "curriculum": false,
+      "func": "body_angular_velocity_penalty",
+      "weight": -0.002
+    },
+    "dof_pos_limits": {
+      "curriculum": false,
+      "func": "joint_pos_limits",
+      "weight": -1.0
+    },
+    "gentle_landing": {
+      "curriculum": true,
+      "func": "trunk_vertical_accel_penalty",
+      "weight": 0.002
+    },
+    "joint_torque_rate_l2": {
+      "curriculum": true,
+      "func": "joint_torque_rate_l2",
+      "weight": 0.0
+    },
+    "roulade_flatness": {
+      "curriculum": false,
+      "func": "roulade_flatness_penalty",
+      "weight": -0.5
+    },
+    "roulade_head_pivot": {
+      "curriculum": false,
+      "func": "roulade_head_pivot",
+      "weight": 0.5
+    },
+    "roulade_height_after_roll": {
+      "curriculum": false,
+      "func": "roulade_height_after_roll",
+      "weight": 1.0
+    },
+    "roulade_landing_composite": {
+      "curriculum": false,
+      "func": "roulade_landing_composite",
+      "weight": 4.0
+    },
+    "roulade_landing_sharp": {
+      "curriculum": false,
+      "func": "roulade_landing_sharp",
+      "weight": 2.0
+    },
+    "roulade_lateral_vel": {
+      "curriculum": false,
+      "func": "roulade_lateral_velocity_penalty",
+      "weight": -0.5
+    },
+    "roulade_overspeed": {
+      "curriculum": false,
+      "func": "roulade_overspeed_penalty",
+      "weight": -0.1
+    },
+    "roulade_progress": {
+      "curriculum": false,
+      "func": "roulade_progress",
+      "weight": 8.0
+    },
+    "roulade_rise_velocity": {
+      "curriculum": false,
+      "func": "roulade_rise_velocity",
+      "weight": 0.75
+    },
+    "roulade_sagittal": {
+      "curriculum": false,
+      "func": "roulade_sagittal_penalty",
+      "weight": -0.1
+    },
+    "roulade_stand_tax": {
+      "curriculum": false,
+      "func": "roulade_stand_tax",
+      "weight": 5.0
+    },
+    "roulade_upright_after_roll": {
+      "curriculum": false,
+      "func": "roulade_upright_after_roll",
+      "weight": 1.5
+    },
+    "self_collisions": {
+      "curriculum": false,
+      "func": "self_collision_cost",
+      "weight": -0.1
+    }
+  },
+  "SitStand": {
+    "action_rate_l2": {
+      "curriculum": true,
+      "func": "action_rate_l2",
+      "weight": -0.1
+    },
+    "angular_momentum": {
+      "curriculum": false,
+      "func": "angular_momentum_penalty",
+      "weight": -0.02
+    },
+    "body_ang_vel": {
+      "curriculum": false,
+      "func": "body_angular_velocity_penalty",
+      "weight": -0.05
+    },
+    "descent_speed": {
+      "curriculum": true,
+      "func": "trunk_downward_velocity_penalty",
+      "weight": 10.0
+    },
+    "dof_pos_limits": {
+      "curriculum": false,
+      "func": "joint_pos_limits",
+      "weight": -1.0
+    },
+    "gentle_motion": {
+      "curriculum": false,
+      "func": "trunk_vertical_accel_penalty",
+      "weight": 0.05
+    },
+    "head_pose_tracking": {
+      "curriculum": false,
+      "func": "head_pose_tracking",
+      "weight": 0.75
+    },
+    "joint_torque_rate_l2": {
+      "curriculum": true,
+      "func": "joint_torque_rate_l2",
+      "weight": 0.0
+    },
+    "posture_composite": {
+      "curriculum": false,
+      "func": "posture_composite",
+      "weight": 3.0
+    },
+    "posture_height": {
+      "curriculum": false,
+      "func": "posture_height_gaussian",
+      "weight": 1.0
+    },
+    "posture_height_l1": {
+      "curriculum": false,
+      "func": "posture_height_l1",
+      "weight": 6.0
+    },
+    "posture_height_sharp": {
+      "curriculum": false,
+      "func": "posture_height_gaussian",
+      "weight": 1.0
+    },
+    "posture_pose_l1": {
+      "curriculum": false,
+      "func": "posture_pose_l1",
+      "weight": 1.0
+    },
+    "posture_pose_legs": {
+      "curriculum": false,
+      "func": "posture_pose_match",
+      "weight": 4.0
+    },
+    "posture_stillness": {
+      "curriculum": false,
+      "func": "posture_stillness",
+      "weight": 2.0
+    },
+    "rise_bootstrap": {
+      "curriculum": false,
+      "func": "posture_rise_bootstrap",
+      "weight": 0.75
+    },
+    "rise_speed": {
+      "curriculum": true,
+      "func": "trunk_upward_velocity_penalty",
+      "weight": 0.0
+    },
+    "self_collisions": {
+      "curriculum": false,
+      "func": "self_collision_cost",
+      "weight": -1.0
+    },
+    "upright_linear": {
+      "curriculum": false,
+      "func": "body_upright_linear",
+      "weight": 2.5
+    },
+    "upright_while_tall": {
+      "curriculum": false,
+      "func": "upright_while_tall",
+      "weight": 1.5
+    }
+  },
+  "Spin": {
+    "action_rate_l2": {
+      "curriculum": true,
+      "func": "action_rate_l2",
+      "weight": -1.0
+    },
+    "body_ang_vel": {
+      "curriculum": false,
+      "func": "body_angular_velocity_penalty",
+      "weight": -0.05
+    },
+    "feet_flat": {
+      "curriculum": false,
+      "func": "feet_flat_penalty",
+      "weight": -2.0
+    },
+    "joint_torques_l2": {
+      "curriculum": false,
+      "func": "joint_torques_l2",
+      "weight": -0.001
+    },
+    "leg_antisymmetry": {
+      "curriculum": true,
+      "func": "leg_antisymmetry",
+      "weight": 1.0
+    },
+    "neck_action_rate_l2": {
+      "curriculum": false,
+      "func": "neck_action_rate_l2",
+      "weight": -0.5
+    },
+    "neck_joint_pos_l2": {
+      "curriculum": false,
+      "func": "neck_joint_pos_l2",
+      "weight": -0.2
+    },
+    "self_collisions": {
+      "curriculum": false,
+      "func": "self_collision_cost",
+      "weight": -1.0
+    },
+    "spin_grounded": {
+      "curriculum": false,
+      "func": "spin_grounded",
+      "weight": 0.5
+    },
+    "spin_rate_l1": {
+      "curriculum": false,
+      "func": "spin_rate_l1",
+      "weight": 0.5
+    },
+    "spin_rate_track": {
+      "curriculum": false,
+      "func": "spin_rate_track",
+      "weight": 6.0
+    },
+    "spin_stay_in_place": {
+      "curriculum": false,
+      "func": "spin_stay_in_place",
+      "weight": -3.0
+    },
+    "spin_wheel_differential": {
+      "curriculum": false,
+      "func": "spin_wheel_differential",
+      "weight": 1.0
+    },
+    "upright": {
+      "curriculum": false,
+      "func": "upright",
+      "weight": 2.0
+    }
+  },
+  "StandUp": {
+    "action_rate_l2": {
+      "curriculum": true,
+      "func": "action_rate_l2",
+      "weight": -0.1
+    },
+    "angular_momentum": {
+      "curriculum": false,
+      "func": "angular_momentum_penalty",
+      "weight": -0.02
+    },
+    "arrival_damping": {
+      "curriculum": true,
+      "func": "body_ang_vel_at_height",
+      "weight": 0.0
+    },
+    "body_ang_vel": {
+      "curriculum": false,
+      "func": "body_angular_velocity_penalty",
+      "weight": -0.05
+    },
+    "body_pose_tracking": {
+      "curriculum": true,
+      "func": "body_pose_tracking_locomotion",
+      "weight": 0.0
+    },
+    "com_upward_velocity": {
+      "curriculum": false,
+      "func": "com_upward_velocity",
+      "weight": 0.75
+    },
+    "dof_pos_limits": {
+      "curriculum": false,
+      "func": "joint_pos_limits",
+      "weight": -1.0
+    },
+    "gentle_rise": {
+      "curriculum": false,
+      "func": "trunk_vertical_accel_penalty",
+      "weight": 0.005
+    },
+    "head_pose_bias": {
+      "curriculum": true,
+      "func": "head_pose_bias_penalty",
+      "weight": 0.0
+    },
+    "head_pose_tracking": {
+      "curriculum": false,
+      "func": "head_pose_tracking",
+      "weight": 0.75
+    },
+    "height_stand": {
+      "curriculum": false,
+      "func": "height_target_gaussian",
+      "weight": 1.0
+    },
+    "height_stand_l1": {
+      "curriculum": false,
+      "func": "height_l1_penalty",
+      "weight": 7.5
+    },
+    "height_stand_sharp": {
+      "curriculum": true,
+      "func": "height_target_gaussian",
+      "weight": 1.0
+    },
+    "joint_torque_rate_l2": {
+      "curriculum": true,
+      "func": "joint_torque_rate_l2",
+      "weight": 0.0
+    },
+    "pose_stand_l1": {
+      "curriculum": false,
+      "func": "pose_l1_penalty",
+      "weight": 1.25
+    },
+    "pose_stand_legs": {
+      "curriculum": false,
+      "func": "pose_target_match",
+      "weight": 2.0
+    },
+    "self_collisions": {
+      "curriculum": false,
+      "func": "self_collision_cost",
+      "weight": -1.0
+    },
+    "standing_composite": {
+      "curriculum": true,
+      "func": "standing_composite_score",
+      "weight": 3.75
+    },
+    "upright_linear": {
+      "curriculum": false,
+      "func": "body_upright_linear",
+      "weight": 1.5
+    },
+    "upright_sharp": {
+      "curriculum": true,
+      "func": "upright_gaussian_at_height",
+      "weight": 1.5
+    }
+  },
+  "Swizzle": {
+    "action_over_limit": {
+      "curriculum": false,
+      "func": "action_over_limit_penalty",
+      "weight": -0.5
+    },
+    "action_rate_l2": {
+      "curriculum": true,
+      "func": "action_rate_l2",
+      "weight": -1.0
+    },
+    "angular_momentum": {
+      "curriculum": false,
+      "func": "angular_momentum_penalty",
+      "weight": -0.02
+    },
+    "body_ang_vel": {
+      "curriculum": false,
+      "func": "body_angular_velocity_penalty",
+      "weight": -0.05
+    },
+    "com_height_target": {
+      "curriculum": false,
+      "func": "com_height_target",
+      "weight": 2.0
+    },
+    "feet_flat": {
+      "curriculum": false,
+      "func": "feet_flat_penalty",
+      "weight": -2.0
+    },
+    "forward_lean": {
+      "curriculum": false,
+      "func": "forward_lean_reward",
+      "weight": 1.5
+    },
+    "grounded": {
+      "curriculum": false,
+      "func": "grounded_reward",
+      "weight": 1.0
+    },
+    "head_pose_tracking": {
+      "curriculum": true,
+      "func": "head_pose_tracking",
+      "weight": 0.0
+    },
+    "heading_hold": {
+      "curriculum": true,
+      "func": "heading_hold_reward",
+      "weight": 1.0
+    },
+    "heading_tracking": {
+      "curriculum": true,
+      "func": "heading_tracking_reward",
+      "weight": 0.0
+    },
+    "joint_torques_l2": {
+      "curriculum": false,
+      "func": "joint_torques_l2",
+      "weight": -0.001
+    },
+    "leg_symmetry": {
+      "curriculum": false,
+      "func": "leg_symmetry_reward",
+      "weight": 2.0
+    },
+    "neck_action_rate_l2": {
+      "curriculum": false,
+      "func": "neck_action_rate_l2",
+      "weight": -0.5
+    },
+    "pose": {
+      "curriculum": false,
+      "func": "variable_posture",
+      "weight": 2.0
+    },
+    "self_collisions": {
+      "curriculum": false,
+      "func": "self_collision_cost",
+      "weight": -1.0
+    },
+    "upright": {
+      "curriculum": false,
+      "func": "upright",
+      "weight": 2.0
+    },
+    "wheel_speed": {
+      "curriculum": false,
+      "func": "wheel_speed_reward",
+      "weight": 10.0
+    }
+  },
+  "VelStand": {
+    "action_rate_l2": {
+      "curriculum": true,
+      "func": "action_rate_l2",
+      "weight": -0.1
+    },
+    "air_time": {
+      "curriculum": false,
+      "func": "feet_air_time_upright",
+      "weight": 3.0
+    },
+    "angular_momentum": {
+      "curriculum": false,
+      "func": "angular_momentum_penalty",
+      "weight": -0.02
+    },
+    "body_ang_vel": {
+      "curriculum": false,
+      "func": "body_angular_velocity_penalty",
+      "weight": -0.05
+    },
+    "body_pose_tracking": {
+      "curriculum": false,
+      "func": "body_pose_tracking_6d",
+      "weight": 0.0
+    },
+    "com_upward_velocity": {
+      "curriculum": true,
+      "func": "com_upward_velocity",
+      "weight": 0.0
+    },
+    "dof_pos_limits": {
+      "curriculum": false,
+      "func": "joint_pos_limits",
+      "weight": -1.0
+    },
+    "fallen_tax": {
+      "curriculum": true,
+      "func": "fallen_state_penalty",
+      "weight": 0.0
+    },
+    "foot_clearance": {
+      "curriculum": false,
+      "func": "feet_clearance",
+      "weight": -2.0
+    },
+    "foot_slip": {
+      "curriculum": false,
+      "func": "feet_slip",
+      "weight": -0.1
+    },
+    "foot_swing_height": {
+      "curriculum": false,
+      "func": "feet_swing_height",
+      "weight": -0.25
+    },
+    "head_pose_bias": {
+      "curriculum": true,
+      "func": "head_pose_bias_penalty",
+      "weight": 0.0
+    },
+    "head_pose_tracking": {
+      "curriculum": false,
+      "func": "head_pose_tracking",
+      "weight": 2.0
+    },
+    "height_progress": {
+      "curriculum": false,
+      "func": "height_progress",
+      "weight": 30.0
+    },
+    "joint_torque_rate_l2": {
+      "curriculum": false,
+      "func": "joint_torque_rate_l2",
+      "weight": -0.002
+    },
+    "pose": {
+      "curriculum": false,
+      "func": "variable_posture",
+      "weight": 1.0
+    },
+    "recovery_success": {
+      "curriculum": true,
+      "func": "recovery_success",
+      "weight": 0.0
+    },
+    "self_collisions": {
+      "curriculum": false,
+      "func": "self_collision_cost",
+      "weight": -1.0
+    },
+    "track_angular_velocity": {
+      "curriculum": false,
+      "func": "track_angular_velocity",
+      "weight": 2.0
+    },
+    "track_linear_velocity": {
+      "curriculum": false,
+      "func": "track_linear_velocity",
+      "weight": 2.0
+    },
+    "upright": {
+      "curriculum": false,
+      "func": "upright",
+      "weight": 2.0
+    },
+    "upright_progress": {
+      "curriculum": false,
+      "func": "upright_progress",
+      "weight": 5.0
+    }
+  },
+  "Velocity": {
+    "action_rate_l2": {
+      "curriculum": true,
+      "func": "action_rate_l2",
+      "weight": -0.1
+    },
+    "air_time": {
+      "curriculum": false,
+      "func": "feet_air_time",
+      "weight": 3.0
+    },
+    "angular_momentum": {
+      "curriculum": false,
+      "func": "angular_momentum_penalty",
+      "weight": -0.02
+    },
+    "body_ang_vel": {
+      "curriculum": false,
+      "func": "body_angular_velocity_penalty",
+      "weight": -0.05
+    },
+    "body_pose_tracking": {
+      "curriculum": false,
+      "func": "body_pose_tracking_6d",
+      "weight": 0.0
+    },
+    "dof_pos_limits": {
+      "curriculum": false,
+      "func": "joint_pos_limits",
+      "weight": -1.0
+    },
+    "foot_clearance": {
+      "curriculum": false,
+      "func": "feet_clearance",
+      "weight": -2.0
+    },
+    "foot_slip": {
+      "curriculum": false,
+      "func": "feet_slip",
+      "weight": -0.1
+    },
+    "foot_swing_height": {
+      "curriculum": false,
+      "func": "feet_swing_height",
+      "weight": -0.25
+    },
+    "head_pose_bias": {
+      "curriculum": true,
+      "func": "head_pose_bias_penalty",
+      "weight": 0.0
+    },
+    "head_pose_tracking": {
+      "curriculum": false,
+      "func": "head_pose_tracking",
+      "weight": 2.0
+    },
+    "pose": {
+      "curriculum": false,
+      "func": "variable_posture",
+      "weight": 1.0
+    },
+    "self_collisions": {
+      "curriculum": false,
+      "func": "self_collision_cost",
+      "weight": -1.0
+    },
+    "track_angular_velocity": {
+      "curriculum": false,
+      "func": "track_angular_velocity",
+      "weight": 2.0
+    },
+    "track_linear_velocity": {
+      "curriculum": false,
+      "func": "track_linear_velocity",
+      "weight": 2.0
+    },
+    "upright": {
+      "curriculum": false,
+      "func": "upright",
+      "weight": 2.0
+    }
+  }
+}
